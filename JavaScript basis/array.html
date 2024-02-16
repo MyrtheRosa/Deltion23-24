@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <style>
+        fieldset {
+            width: fit-content;
+            background-color: floralwhite;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .main {
+            background-color: honeydew;
+        }
+    </style>
+
+    <script>
+        const cars = ["Saab", "Volvo", "BMW", "Audi"];
+        const prices = [17000, 25000, 30000, 45000];
+    </script>
+
+    <script>
+        function updateTotal() {
+            let total = 0;
+            for (let i = 0; i < prices.length; i++) {
+                total += prices[i];
+            }
+            document.getElementById("totaal").innerHTML = 'De totale waarde is: ' + '€' + total;
+        }
+
+        function handleNewCar() {
+            // Get form input
+            const carInput = document.getElementById("car");
+            const priceInput = document.getElementById("price");
+
+            // Update array 
+            cars.push(carInput.value)
+            prices.push(parseInt(priceInput.value))
+
+            // Update html (laat nieuwe waardes zien)
+            const lastIndex = cars.length - 1
+            document.getElementById("cars").innerHTML += '<li>' + "De " + cars[lastIndex] + " kost" + " €" + prices[lastIndex] + '</li>';
+
+            //update prijslijst
+            updateTotal()
+        }
+
+    </script>
+</head>
+
+<body>
+    <fieldset class="main">
+        <div id="cars">
+            <script>
+                let out = '';
+                for (let i = 0; i < cars.length; i++) {
+                    console.log(cars[i]);
+
+                    out += '<li>' + "De " + cars[i] + " kost" + " €" + prices[i] + '</li>';  // +=  eraan vastplakken, alleen een '=' is overschrijven
+                    // KAN OOK: out += `<li> De ${cars[i]} kost ${prices[i]}</li>`
+                }
+                document.getElementById("cars").innerHTML = out;
+
+            </script>
+        </div>
+
+        <form>
+
+            <fieldset>
+
+                <p>
+                    <label for="cars"> Car Brand: </label>
+                    <input type="text" name="car" id="car" placeholder="Car Brand">
+                </p>
+                <p>
+                    <label for="price">Price: </label>
+                    <input type="number" name="price" id="price" placeholder="Price">
+                </p>
+                <p>
+                    <button type="button" onclick="handleNewCar()">Toevoegen</button>
+                </p>
+            </fieldset>
+        </form>
+        <div id="totaal">
+
+            <script>
+                updateTotal()
+            </script>
+        </div>
+    </fieldset>
+</body>
+
+</html>

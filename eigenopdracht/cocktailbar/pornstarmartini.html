@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        body {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .cocktail {
+            height: 400px;
+            width: 700px;
+        }
+
+        header {
+            background-color: lightpink;
+            padding: 30px;
+            text-align: center;
+            font-size: medium;
+            color: goldenrod;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: fit-content;
+            background: fixed;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: square;
+            margin-top: auto;
+            width: auto;
+            padding: 0;
+        }
+
+        li a {
+            display: block;
+            color: goldenrod;
+            padding: 8px 16px;
+            text-decoration: dashed;
+            text-align: center;
+        }
+
+        li a:hover {
+            background-color: lightpink;
+            color: goldenrod;
+        }
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 70%;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            text-align: center;
+            color: goldenrod;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2> <text-allign: center style="color: goldenrod;background-color: lightpink;"> Cocktail recepten. </h2>
+    <p>
+    </p>
+    <header>
+        <h1>Cocktails!!!</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <h2>
+                    <li>De bruisende Pornstar Martini</li>
+                </h2>
+            </ul>
+        </nav>
+    </section>
+    <nav>
+        <h1>Contactgegevens</h1>
+        <h2>Adres: Mozartlaan 308E, Zwolle<br>
+            Telefoonnummer: 06109876<br>
+            E-mail: cocktailbar@info.com<br>
+        </h2>
+        <h2>Laat hier een bericht achter voor verdere vragen</h2>
+        <form action="cocktailbar.html" method="GET">
+            <label for="Vraag">Stel hier uw vraag:</label>
+            <input type="text" id="vraag" name="klantenservice">
+            <input type="submit" value="verzenden">
+        </form>
+    </nav>
+    <article>
+        <h1>De bruisende Pornstar Martini</h1>
+        <p>
+        <h3>Ingredienten:</h3>
+
+        Vanille vodka 30-45 ml<br>
+        Passievruchtsap 45 ml<br>
+        Limoensap 5 ml<br>
+        Eiwit<br>
+        <h3>Benodigdheden:</h3>
+        Barmaatje<br>
+        Shaker
+        <h3>Bereidingswijze:</h3>
+        Dry Shake en daarna wet shake
+        </p>
+        <p>
+        <h3>Hoe maken we dit drankje?</h3>
+
+        <p>1. Gebruik een shaker</p>
+        <p>2. Voeg eiwit toe van een ei in de shaker</p>
+        <p>3. Voeg met een barmaatje 30-45 ml vanille vodka, 45 ml passievruchtsap en 5 ml limoensap toe in
+            de shaker</p>
+        <p>4. Doe eerst een dry shake (zonder ijs) en daarna een wet shake met ijsblokjes</p>
+        <p>5. Even krachtig shaken tot je een frostlaagje krijgt</p>
+        <p>6. Uitschenken zonder ijs in een gekoeld martiniglas</p>
+        <p>7. Snijd een passievrucht door midden en leg deze in het martiniglas</p>
+        <p>8. Opdienen met klein glaasje bubbels en genieten maar!</p>
+
+        </p>
+    </article>
+    <footer>
+        <img class="cocktail" src="Pornstar_Martini_cocktail.jpg.webp" alt="pornstarmartini"><br>
+        <h1>Geniet ervan!</h1>
+    </footer>
+</body>
+
+</html>

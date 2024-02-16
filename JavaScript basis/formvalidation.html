@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        fieldset {
+            width: fit-content;
+            background-color: ivory;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .outlined {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 8px;
+
+        }
+
+        .errors {
+            border-width: 2px;
+            border-color: red;
+            border-style: solid;
+            color: red;
+        }
+    </style>
+
+    <script src="formvalidation.js"></script>
+
+</head>
+
+<body>
+
+    <fieldset>
+
+        <div class="main">
+            <h2>Test Formulier</h2>
+            <h5>* Zijn verplichte velden</h5>
+            <form>
+                <div class="outlined">
+                    <label for="naam">* Naam </label>
+                    <div>
+                        <input type="text" id="fname" name="naam" class="fname" placeholder="Voornaam"
+                            onfocusout="firstname()">
+                        <input type="text" id="tussenvoegsel" name="naam" class="tussenvoegsel"
+                            placeholder="Tussenvoegsel">
+                        <input type="text" id="lname" name="naam" class="lname" placeholder="Achternaam"
+                            onfocusout="lastname()">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="adres"> * Adres </label>
+                    <input style="width: 160px" type="text" id="adres" name="adres" class="adres" placeholder="Adres"
+                        onfocusout="adress()">
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="pcPlaats"> * Postcode en Plaats </label>
+                    <div>
+                        <input type="text" id="pc" name="postcode" class="pcPlaats" placeholder="Postcode"
+                            onfocusout="Postcode()">
+                        <input type="text" id="plaats" name="plaats" class="pcPlaats" placeholder="Plaats"
+                            onfocusout="Plaats()">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="mobielnr"> Telefoonnummer </label>
+                    <input style="width: 160px" type="text" id="mobielnr" name="mobielnr" class="mobielnr"
+                        placeholder="Telefoonnummer">
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="email">E-Mail </label>
+                    <input style="width: 160px" type="email" id="email" name="email" class="email" placeholder="E-Mail">
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="geslacht">Geslacht </label>
+                    <div>
+                        <input type="radio" id="man" name="geslacht">Man
+                        <br>
+                        <input type="radio" id="vrouw" name="geslacht">Vrouw
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="boyband">Boyband </label>
+                    <select name="boyband" style="width: 110px">
+                        <option value="ateez"> Ateez </option>
+                        <option value="btr"> Big Time Rush</option>
+                        <option value="bts"> BTS</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div class="outlined">
+                    <label for="geboortedatum">Geboortedatum </label>
+                    <input style="width: 160px" type="date" id="geboortedatum" name="geboortedatum">
+                </div>
+                <br>
+                <br>
+                <input type="submit" value="Verstuur" style="background-color: lightpink; border-radius: 16px;">
+            </form>
+            <br>
+            <br>
+        </div>
+        <div class="errors">
+
+            <div id="errorbox1"></div>
+            <div id="errorbox2"></div>
+            <div id="errorbox3"></div>
+            <div id="errorbox4"></div>
+            <div id="errorbox5"></div>
+
+        </div>
+    </fieldset>
+</body>
+
+</html>

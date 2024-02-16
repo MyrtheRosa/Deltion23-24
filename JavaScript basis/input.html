@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input value</title>
+
+
+
+    <style>
+        body {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background-color: antiquewhite;
+        }
+
+        fieldset {
+            width: 350px;
+            background-color: linen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .output {
+            border: 2px solid deeppink;
+            min-height: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="body">
+        <fieldset>
+            <h2>Output:</h2>
+            <div class="output" id="output">
+
+                <script>
+                    const urlParams = new URLSearchParams(window.location.search);
+
+                    // Get strings from URL
+                    const firstName = urlParams.get('fname');
+                    const lastName = urlParams.get('lname');
+                    const ageNowString = urlParams.get('ageN');
+                    const ageString = urlParams.get('age');
+
+                    // Turn string of numbers into actual numbers
+                    const ageNow = Number.parseInt(ageNowString)
+                    const age = Number.parseInt(ageString)
+
+                    const rekensom = ageNow + age
+                    var tekst = "My name is " + firstName + " " + lastName + " I am now " + ageNow + " and in " + age + " years, I will be: " + rekensom
+
+
+                    document.getElementById("output").innerHTML = tekst;
+                </script>
+
+            </div>
+        </fieldset>
+        <form>
+
+            <fieldset class="">
+                <p class="form">
+                    <label for="fname"> First Name: </label>
+                    <input type="text" name="fname" id="fname" placeholder="First Name">
+                </p>
+                <p class="form">
+                    <label for="lname">Last Name: </label>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name">
+                </p>
+                <p class="form">
+                    <label for="ageN"> Age now: </label>
+                    <input type="number" id="ageN" name="ageN" placeholder="Age">
+                </p>
+                <p class="form">
+                    <label for="age"> In about: </label>
+                    <input type="number" id="age" name="age" placeholder="In about ... years">
+                </p>
+                <p class="form">
+                    <input type="submit" value="Send Values">
+                </p>
+
+        </form>
+    </div>
+</body>
+
+</html>

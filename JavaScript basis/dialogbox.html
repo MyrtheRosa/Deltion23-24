@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basis</title>
+
+    <script>
+        function showDialog(tekst) {
+            document.getElementById("dialogBox").style = "left: 60px; top: 80px;";
+            document.getElementById("dialogtitle").innerHTML = tekst;
+        }
+
+        function hideDialog() {
+            document.getElementById("dialogBox").style = "left: -1500px; top: 80px";
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: blanchedalmond;
+        }
+
+        #dialogBox {
+            border: 1px solid navy;
+            margin-left: 30%;
+            margin-right: 30%;
+            position: absolute;
+
+            left: -1500px;
+            transition: 0.3s;
+        }
+
+        #dialogHeader {
+            background-color: navy;
+            color: white;
+            padding: 4px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .sluiten {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+
+
+        #dialogContent {
+            padding: 4px;
+            background-color: lightpink;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="dialogBox">
+        <div id="dialogHeader" onclick="hideDialog()">
+            <div id="dialogtitle">Titel</div>
+            <div><img src="sluit.png" class="sluiten"> </div>
+        </div>
+        <div id="dialogContent">
+            "content content content content content content content"
+        </div>
+    </div>
+
+    <h1>Dialog Box</h1>
+
+    <button onclick="showDialog('munchy')">Show Dialog</button>
+    <!-- <button onclick="showDialog('anders')">Show dialog anders</button> -->
+    <button onclick="hideDialog()">Hide Dialog</button>
+
+</body>
+
+</html>

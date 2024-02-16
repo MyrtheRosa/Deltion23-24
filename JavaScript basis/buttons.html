@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        #lijst {
+            height: 300px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="start" onclick="functie('start' , 10)">
+    <input type="button" value="stop" onclick="functie('stop')">
+    <input type="button" value="printen" onclick="printlijst()">
+    <div class="body" id="lijst">
+        inner
+    </div>
+
+
+    <script>
+
+        let lijst = ["eerste element", "tweede element", "derde element"];
+        // console.log(lijst);
+
+        function functie(text, number) {
+            console.log(text);
+            if (number) {
+                console.log(number);
+            }
+
+            //let, const (binnen scope kan niet verandert worden) of een var (kan verandert worden)
+            // console.log(lijst.length); // aantal onderdelen in een array (nu met de naam :  lijst)
+            let out = '';
+            for (let i = 0; i < lijst.length; i++) {
+                console.log(lijst[i]);
+                out += lijst[i];  // +=  eraan vastplakken, alleen een '=' is overschrijven
+            }
+            document.getElementById("lijst").innerHTML = out;
+
+
+
+        }
+
+        function printlijst() {
+
+            // lijst.forEach(element => {
+            //     console.log(element);
+            // });
+
+
+            document.getElementById('lijst').innerHTML = '';
+            lijst.forEach((element) => { // een sort van foreach zoals in PHP
+                console.log(element);
+                document.getElementById('lijst').innerHTML += '* ' + element + "____<br>";
+
+            });
+
+
+        }
+
+    </script>
+</body>
+
+</html>

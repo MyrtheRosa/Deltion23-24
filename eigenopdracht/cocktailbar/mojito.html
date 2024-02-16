@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        body {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .cocktail {
+            height: 400px;
+            width: 900px;
+        }
+
+        header {
+            background-color: lightpink;
+            padding: 30px;
+            text-align: center;
+            font-size: medium;
+            color: goldenrod;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: fit-content;
+            background: fixed;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: square;
+            margin-top: auto;
+            width: auto;
+            padding: 0;
+        }
+
+        li a {
+            display: block;
+            color: goldenrod;
+            padding: 8px 16px;
+            text-decoration: dashed;
+            text-align: center;
+        }
+
+        li a:hover {
+            background-color: lightpink;
+            color: goldenrod;
+        }
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 70%;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            text-align: center;
+            color: goldenrod;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2> <text-allign: center style="color: goldenrod;background-color: lightpink;"> Cocktail recepten. </h2>
+    <p>
+    </p>
+    <header>
+        <h1>Cocktails!!!</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <h2>
+                    <li>Een verfrissende Mojito</li>
+                </h2>
+            </ul>
+        </nav>
+    </section>
+    <nav>
+        <h1>Contactgegevens</h1>
+        <h2>Adres: Mozartlaan 308E, Zwolle<br>
+            Telefoonnummer: 06109876<br>
+            E-mail: cocktailbar@info.com<br>
+        </h2>
+        <h2>Laat hier een bericht achter voor verdere vragen</h2>
+        <form action="cocktailbar.html" method="GET">
+            <label for="Vraag">Stel hier uw vraag:</label>
+            <input type="text" id="vraag" name="klantenservice">
+            <input type="submit" value="verzenden">
+        </form>
+    </nav>
+    <article>
+        <h1>Onze verfrissende Mojito</h1>
+        <p>
+        <h3>Ingredienten:</h3>
+        Witte rum 45 ml<br>
+        Rietsuiker 2 barlepels<br>
+        Bruiswater 30 ml<br>
+        Limoenpartjes 4 stuks<br>
+        Munt 1 takje<br>
+        Angostura bitters (optioneel) 2 dashes / druppels<br>
+        </p>
+        <h3>Benodigdheden:</h3>
+        Muddler<br>
+        Barlepel<br>
+        Barmaatje
+        <h3>Bereidingswijze:</h3>
+        Muddle in the glass
+        <p>
+        <h3>Hoe maken we dit drankje?</h3>
+
+        <p> 1. Gebruik voor deze cocktail een stevig glas met stevige onderkant om in te
+            muddlen (stampen).
+            Je
+            moet
+            namelijk goed muddlen om alle smaken te mengen, belangrijk dat je hier een goed glas
+            voor
+            hebt.
+            Zet ook
+            al
+            vast een vol glas met crushed ice klaar want je hebt veel ijs nodig.</p>
+        <p> 2. Begin eerst met 2 barlepels rietsuiker en de limoenpartjes in het glas te doen. En
+            muddle
+            dit in
+            het
+            glas.</p>
+        <p> 3. Nu pak je de muntblaadjes. Voor je deze in het glas doet sla je deze in de palm van je
+            hand. Je ruikt meteen het aroma dat vrij komt.</p>
+        <p> 4. Hierna neem je 4-5 muntblaadjes die je in het glas doet. Smeer ook de rand van je glas
+            in met munt zodat je ook hier extra muntsmaak krijgt. Let op de munt muddle je dus niet mee.</p>
+        <p> 5. Voeg nu naar smaak witte rum toe. Ca 30 tot 45 ml met een barmaatje.</p>
+        <p> 6. Vul je glas met crushed ice en nu roer je met je barlepel alles door elkaar zodat het
+            goed mengt. Let erop dat de limoentjes en de munt mooi zweven in je glas en niet onderin blijven liggen.</p>
+        <p> 7. Top nu de cocktail af met bruiswater. Eventueel kun je ook nog 1 a 2 dashes (druppels)
+            angostura bitters toevoegen.</p>
+        <p> 8. Nu nog het glas afwerken met extra crushed ice
+            Zet de kroon op het werk: garneer met een kroontje munt.
+            Hij is nu klaar. Zet een lekker zomers muziekje op en geniet van je zelfgemaakte Mojito!
+        </p>
+
+    </article>
+    <footer>
+        <img class="cocktail" src="mojito-cocktail-recept.jpg.webp" alt="mojito"><br>
+        <h1>Geniet ervan!</h1>
+    </footer>
+</body>
+
+</html>

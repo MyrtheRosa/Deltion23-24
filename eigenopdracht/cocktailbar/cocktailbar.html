@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif
+        }
+
+        body {
+            text-align: center;
+            background-color: bisque;
+        }
+
+        .cocktail {
+            height: 400px;
+            width: 900px;
+        }
+
+        header {
+            background-color: lightpink;
+            padding: 30px;
+            text-align: center;
+            font-size: medium;
+            color: goldenrod;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: fit-content;
+            background: fixed;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin-top: auto;
+            width: auto;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+        li :hover {
+            flex: 1;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightpink;
+            color: goldenrod;
+
+        }
+
+
+        li a {
+
+            color: goldenrod;
+            text-decoration: dashed;
+            text-align: center;
+        }
+
+
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 70%;
+            background-color: lightgoldenrodyellow;
+            text-align: center;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
+            text-align: center;
+            color: goldenrod;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2> <text-allign: center; style="color: goldenrod; background-color: lightpink;">Cocktail recepten.</h2>
+    </text-allign:>
+    <p>
+    </p>
+    <header>
+        <h1>Cocktails!!!</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+
+                <li><a href="http://localhost/school/eigenopdracht/cocktailbar/mojito.html">Mojito</a></li>
+                <li><a href="http://localhost/school/eigenopdracht/cocktailbar/aperolspritz.html">Aperol Spritz</a></li>
+                <li><a href="http://localhost/school/eigenopdracht/cocktailbar/pornstarmartini.html">Pornstar
+                        Martini</a></li>
+                <li><a href="http://localhost/school/eigenopdracht/cocktailbar/mimosa.html">Mimosa</a></li>
+                <li><a href="http://localhost/school/eigenopdracht/cocktailbar/pinacolada.html">Pina Colada</a></li>
+
+            </ul>
+        </nav>
+    </section>
+    <nav>
+        <h1>Contactgegevens</h1>
+        <h2>Adres: Mozartlaan 308E, Zwolle<br>
+            Telefoonnummer: 06109876<br>
+            E-mail: cocktailbar@info.com<br>
+        </h2>
+        <h2>Laat hier een bericht achter voor verdere vragen</h2>
+        <form action="cocktailbar.html" method="GET">
+            <label for="Vraag">Stel hier uw vraag:</label>
+            <input type="text" id="vraag" name="klantenservice">
+            <input type="submit" value="verzenden">
+        </form>
+    </nav>
+    <article>
+        <h1>Welkom op onze pagina waar van alles staat over verschillende heerlijke cocktails om uw winterdepressie nog
+            even uit
+            te stellen</h1>
+        <p>
+        <h3>Historie van de cocktails</h3>
+        Het verhaal gaat dat een kroegbazin van Ierse komaf, Betsy Flanagan een Franse klant een lekker drankje in
+        schonk. Om dit op te fleuren gebruikte ze de gekleurde veren van een vechthanen. De klant was zo onder de
+        indruk van het voorgeschotelde drankje dat hij het glas hief en riep: “Vive le cocktail!”. Dit drankje kan
+        je tegenwoordig bestellen via de naam "The Old Fashioned".
+        </p>
+        <p>
+        <h3>Waar moet een drankje aan voldoen wil je het een cocktail noemen. En wat zijn de populairste drankjes van
+            2023. </h3>
+
+        <p>Een cocktail is een drankje waarin minimaal drie verschillende ingrediënten worden gemengd.</p>
+        <p> Dat mengen kan op verschillende manieren:<br>
+            Zo heeft u cocktails die geroerd worden ('stirred')<br>
+            Geschud zijn ('shaken')<br>
+            Gemixt ('blended')<br>
+            Of in het glas gemengd worden (build).
+        </p>
+        <h3>
+            <p>De top drie populairste drankjes uit 2023 zijn:</p>
+        </h3>
+        <p>1. Mojito</p>
+        <p>2. Aperol Spritz</p>
+        <p>3. Pornstar Martini</p>
+        <h3>Zin in iets zonder alcohol? Dan zijn Mocktails jouw go-to.</h3>
+        Een virgin cocktail is een cocktail zonder alcohol en wordt ook wel mocktail genoemd.<br>
+        Alcoholvrije cocktails worden steeds populairder. De benaming voor mocktail komt van het Engelse
+        woord voor 'nep'
+        namelijk: mock. Een neppe cocktail dus, zonder alcohol.
+
+        </p>
+    </article>
+    <footer>
+        <img class="cocktail" src="frozen-margarita-recept.webp" alt="frozen margarita"><br>
+        <h1>Geniet ervan!</h1>
+    </footer>
+</body>
+
+</html>
