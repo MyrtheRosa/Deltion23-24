@@ -22,9 +22,18 @@
     <script>
         const cars = ["Saab", "Volvo", "BMW", "Audi"];
         const prices = [17000, 25000, 30000, 45000];
-    </script>
 
-    <script>
+        function geefTekst() {
+            let out = '';
+            for (let i = 0; i < cars.length; i++) {
+                console.log(cars[i]);
+
+                out += '<li>' + "De " + cars[i] + " kost" + " €" + prices[i] + '</li>';  // +=  eraan vastplakken, alleen een '=' is overschrijven
+                // KAN OOK: out += `<li> De ${cars[i]} kost ${prices[i]}</li>`
+            }
+            document.getElementById("cars").innerHTML = out;
+        }
+
         function updateTotal() {
             let total = 0;
             for (let i = 0; i < prices.length; i++) {
@@ -55,22 +64,8 @@
 
 <body>
     <fieldset class="main">
-        <div id="cars">
-            <script>
-                let out = '';
-                for (let i = 0; i < cars.length; i++) {
-                    console.log(cars[i]);
-
-                    out += '<li>' + "De " + cars[i] + " kost" + " €" + prices[i] + '</li>';  // +=  eraan vastplakken, alleen een '=' is overschrijven
-                    // KAN OOK: out += `<li> De ${cars[i]} kost ${prices[i]}</li>`
-                }
-                document.getElementById("cars").innerHTML = out;
-
-            </script>
-        </div>
-
+        <div id="cars"></div>
         <form>
-
             <fieldset>
 
                 <p>
@@ -86,13 +81,12 @@
                 </p>
             </fieldset>
         </form>
-        <div id="totaal">
-
-            <script>
-                updateTotal()
-            </script>
-        </div>
+        <div id="totaal"></div>
     </fieldset>
+    <script>
+        geefTekst();
+        updateTotal();
+    </script>
 </body>
 
 </html>
