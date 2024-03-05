@@ -8,7 +8,7 @@
 
     <style>
         fieldset {
-            width: fit-content;
+            width: 350px;
             background-color: floralwhite;
             border-radius: 8px;
             padding: 15px;
@@ -17,22 +17,30 @@
         #display {
             border-width: 2px;
             border-color: lavender;
+            background-color: lavenderblush;
             border-style: solid;
-            width: 300px;
+            width: 350px;
+            border-radius: 8px;
+            padding: 15px;
         }
     </style>
 
     <script>
         function geefTafelOp() {
-            let tafelVan = 13;
-            let html = '';
+            let input = document.getElementById("tafel").value;
+            let tafelVan = Number.parseInt(input);
+
+
+            let html = '<table>';
             for (let i = 1; i <= 10; i++) {
                 //const element = array[i];
                 console.log(i);
                 //tafelVan +=
-                html += '<p>' + i + " x " + tafelVan + " = " + (i * tafelVan) + '</p>';
+                html += '<tr>' + '<td>' + i + '</td>' + '<td>' + " x " + '</td>' + '<td>' + tafelVan + '</td>' + '<td>' + " = " + '</td>' + '<td>' + (i * tafelVan) + '</td>' + '</tr>';
             }
+            html += '</table>';
             document.getElementById("display").innerHTML = html;
+
         }
     </script>
 </head>
